@@ -4,3 +4,12 @@
 
 # node_modules
 node_modules/
+
+
+# cypress
+cypress/*
+!cypress/fixtures
+!cypress/integration
+!cypress/plugins
+
+cy-examples
