@@ -1,3 +1,4 @@
 {
-  "projectId": "emx67v"
+  "projectId": "emx67v",
+  "chromeWebSecurity": false
 }
