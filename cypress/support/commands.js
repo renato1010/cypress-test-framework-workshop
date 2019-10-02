@@ -23,3 +23,18 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("getPhoneByName", name => {
+  cy.get("h4.card-title").each(($el, i, $list) => {
+    if ($el.text().includes(name)) {
+      $el
+        .parents(".card.h-100")
+        .find(".card-footer > button.btn")
+        .click();
+    }
+  });
+  cy.get("a.nav-link.btn.btn-primary")
+    .contains("Checkout")
+    .click();
+  cy.get("input#exampleInputEmail1").should("have.value", "1");
+});
