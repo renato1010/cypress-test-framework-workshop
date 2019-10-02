@@ -4,5 +4,6 @@
   "gender": "Female",
   "body": "Fixtures are a great way to mock data for responses to routes",
   "password": "Bob101010#",
-  "date": "1975-08-03"
+  "date": "1975-08-03",
+  "productName": ["Blackberry", "Nokia Edge"]
 }

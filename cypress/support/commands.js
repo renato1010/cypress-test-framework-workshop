@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -25,7 +27,7 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add("getPhoneByName", name => {
-  cy.get("h4.card-title").each(($el, i, $list) => {
+  cy.get("h4.card-title").each($el => {
     if ($el.text().includes(name)) {
       $el
         .parents(".card.h-100")
@@ -33,8 +35,18 @@ Cypress.Commands.add("getPhoneByName", name => {
         .click();
     }
   });
-  cy.get("a.nav-link.btn.btn-primary")
+  cy.get(
+    "nav.navbar .container #navbarResponsive ul li a.nav-link.btn.btn-primary"
+  )
     .contains("Checkout")
     .click();
-  cy.get("input#exampleInputEmail1").should("have.value", "1");
+  cy.get("table.table.table-hover tbody tr")
+    .contains(name)
+    .parents("tr")
+    .find("td:nth-of-type(2) input")
+    .should("have.value", "1");
+  cy.get("table.table.table-hover tbody tr:last-of-type")
+    .find("td button")
+    .contains("Continue Shopping")
+    .click();
 });
