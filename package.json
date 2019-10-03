@@ -4,9 +4,12 @@
   "description": "Tutorial for Cypress.io test automation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cypress run",
     "cypress:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:head": "cypress run --headed",
+    "cy:chrome": "cypress run --browser chrome",
+    "cy:record": "cypress run --record --key e3d3345d-f6e3-4a0e-8f95-526c6e15489a"
   },
   "keywords": [],
   "author": "Renato Perez",
