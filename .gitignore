@@ -16,5 +16,6 @@ cy-examples
 
 # reports
 mochawesome-report/
+!mochawesome-report/mochawesome.html
 mochawesome*.json
 
