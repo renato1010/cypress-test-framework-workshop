@@ -13,3 +13,8 @@ cypress/*
 !cypress/plugins
 
 cy-examples
+
+# reports
+
+mochawesome-report/
+
