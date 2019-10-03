@@ -15,7 +15,7 @@ cypress/*
 cy-examples
 
 # reports
-mochawesome-report/
-!mochawesome-report/mochawesome.html
-mochawesome*.json
+# mochawesome-report/
+# !mochawesome-report/mochawesome.html
+# mochawesome*.json
 
