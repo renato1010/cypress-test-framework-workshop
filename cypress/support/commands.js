@@ -50,3 +50,14 @@ Cypress.Commands.add("getPhoneByName", name => {
     .contains("Continue Shopping")
     .click();
 });
+
+Cypress.Commands.add("addPhoneToCart", name => {
+  cy.get("h4.card-title").each($el => {
+    if ($el.text().includes(name)) {
+      $el
+        .parents(".card.h-100")
+        .find(".card-footer > button.btn")
+        .click();
+    }
+  });
+});

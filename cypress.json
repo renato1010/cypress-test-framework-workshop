@@ -1,4 +1,6 @@
 {
   "projectId": "emx67v",
-  "chromeWebSecurity": false
+  "env": {
+    "ngPractice": "https://rahulshettyacademy.com/angularpractice/"
+  }
 }

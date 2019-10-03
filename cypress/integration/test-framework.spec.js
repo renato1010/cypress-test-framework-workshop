@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import HomePage from "./Page_Objects/HomePage";
+import HomePage from "../support/Page_Objects/HomePage";
 
 describe("Testing framework", () => {
   before(function() {
