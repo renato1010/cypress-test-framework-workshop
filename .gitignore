@@ -15,6 +15,6 @@ cypress/*
 cy-examples
 
 # reports
-
 mochawesome-report/
+mochawesome*.json
 
